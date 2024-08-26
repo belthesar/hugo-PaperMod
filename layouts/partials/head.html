@@ -35,6 +35,9 @@
 {{- if site.Params.analytics.naver.SiteVerificationTag }}
 <meta name="naver-site-verification" content="{{ site.Params.analytics.naver.SiteVerificationTag }}">
 {{- end }}
+{{ - if site.Params.analytics.plausible }}
+<script defer data-domain="{{site.Params.analytics.plausible.data-domain}}" src="{{- if site.Params.analytics.plausible.selfhosted }}{{site.Params.analytics.plausible.self-hosted-script-src }}{{- else}}https://plausible.io/js/script.js{{- end}}"></script>
+{{ -end }}
 
 {{- /* Styles */}}
 
